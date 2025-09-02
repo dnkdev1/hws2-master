@@ -1,5 +1,8 @@
 .sendForm {
     text-align: right;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
 }
 
 .textarea {
@@ -7,9 +10,8 @@
     height: 40px;
     border-radius: 20px;
     border: 1px solid #0066CC;
-    top: 611px;
-    left: 70px;
-    position: absolute;
+
+
     transition: 0.2s;
 }
 
@@ -19,9 +21,8 @@
     border: none;
     border-radius: 20px;
     background-color: #0066CC;
-    top: 611px;
-    left: 450px;
-    position: absolute;
+
+
     color: white;
 }
 
