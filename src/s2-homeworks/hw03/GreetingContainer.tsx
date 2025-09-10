@@ -24,18 +24,12 @@ export const pureOnBlur = (name: any, setError: any) => { // если имя п�
 }
 
 export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: () => void) => { // если нажата кнопка Enter - добавить
-    /*const value = e.currentTarget.value*/
     if (e.key === 'Enter') {
-
         addUser()
     }
-
 }
 
-// более простой и понятный для новичков
-// function GreetingContainer(props: GreetingPropsType) {
 
-// более современный и удобный для про :)
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
                                                                      users,
                                                                      addUserCallback,
@@ -62,8 +56,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
         pureOnEnter(e, addUser)
     }
 
-    const totalUsers = 0 // need to fix
-    const lastUserName = 'some name' // need to fix
+    const totalUsers = users.length // need to fix
+    const lastUserName = users.length > 0 ? users[users.length - 1].name : 'some name' // need to fix
 
     return (
         <Greeting
