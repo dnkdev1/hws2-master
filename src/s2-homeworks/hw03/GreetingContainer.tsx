@@ -1,7 +1,6 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import Greeting from './Greeting'
 import {UserType} from './HW3'
-import message from "../hw01/message/Message";
 
 type GreetingContainerPropsType = {
     users: UserType[] // need to fix any
@@ -14,13 +13,15 @@ export const pureAddUser = (name: string, setError: (errorMessage: string) => (v
         setName('')
         setError('')
         addUserCallback(name)
-
     } else {
         setError('Ошибка! Введите имя!')
     }
 }
 
-export const pureOnBlur = (name: any, setError: any) => { // если имя пустое - показать ошибку
+export const pureOnBlur = (name: string, setError: (errorMessage: string) => void) => { // если имя пустое - показать ошибку
+if(name.trim() === ''){
+    setError('Ошибка! Введите имя!')
+}
 }
 
 export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: () => void) => { // если нажата кнопка Enter - добавить
@@ -28,7 +29,6 @@ export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: () => v
         addUser()
     }
 }
-
 
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
                                                                      users,
