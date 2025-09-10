@@ -23,7 +23,13 @@ export const pureAddUser = (name: string, setError: (errorMessage: string) => (v
 export const pureOnBlur = (name: any, setError: any) => { // если имя пустое - показать ошибку
 }
 
-export const pureOnEnter = (e: any, addUser: any) => { // если нажата кнопка Enter - добавить
+export const pureOnEnter = (e: ChangeEvent<HTMLInputElement>, addUser: () => void) => { // если нажата кнопка Enter - добавить
+    const value = e.currentTarget.value
+    if (value.trim() !== '') {
+        const newName = value
+        /*addUser()*/
+    }
+
 }
 
 // более простой и понятный для новичков
@@ -38,9 +44,10 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const [name, setName] = useState<string>('') // need to fix any
     const [error, setError] = useState<string>('') // need to fix any
 
-    const setNameCallback = (e: any) => { // need to fix any
-        setName('some name') // need to fix
-
+    const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
+        const value = e.currentTarget.value
+        setName(value) // need to fix
+        console.log(value)
         error && setError('')
     }
     const addUser = () => {
@@ -51,7 +58,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
         pureOnBlur(name, setError)
     }
 
-    const onEnter = (e: any) => {
+    const onEnter = (e: ChangeEvent<HTMLInputElement>) => {
         pureOnEnter(e, addUser)
     }
 

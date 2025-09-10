@@ -28,8 +28,9 @@ export const pureAddUserCallback = (name: string, setUsers: (users: UserType[]) 
         _id: v1(),
         name: name,
     }
-    console.log(user)
     setUsers([...users, user])
+    /*console.log(user)*/
+    console.log(users)
 }
 
 
