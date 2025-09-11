@@ -26,7 +26,6 @@
 
 .errorInput {
     width: 372px;
-    /*height: 100%;*/
     height: 36px;
     border: 1px solid red;
     border-radius: 5px;
@@ -35,7 +34,6 @@
 
 .button {
     width: 78px;
-    /*height: 100%;*/
     height: 36px;
     border: none;
     border-radius: 5px;
@@ -49,7 +47,7 @@
 }
 
 .button:active {
-    /*background-color: #0066CC;*/
+
 }
 
 .button:disabled {
