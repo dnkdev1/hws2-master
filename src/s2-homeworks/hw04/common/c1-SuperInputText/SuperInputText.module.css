@@ -1,16 +1,26 @@
 .input:focus {
+    outline: none;
 }
 
 .input {
+    width: 372px;
+    height: 36px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0 10px;
 }
 
 .inputWrapper {
+    display: flex;
+    flex-direction: column-reverse; /* вертикальное расположение */
+    align-items: flex-start; /* выравнивание по левому краю */
 }
 
 .superInput {
 }
 
 .errorInput {
+    border: 1px solid red;
 }
 
 .errorInput:focus {
