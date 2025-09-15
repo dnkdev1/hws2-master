@@ -12,8 +12,8 @@
 
 .inputWrapper {
     display: flex;
-    flex-direction: column-reverse; /* вертикальное расположение */
-    align-items: flex-start; /* выравнивание по левому краю */
+    flex-direction: column-reverse;
+    align-items: flex-start;
 }
 
 .superInput {

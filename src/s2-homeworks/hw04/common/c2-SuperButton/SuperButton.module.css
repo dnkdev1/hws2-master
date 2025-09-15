@@ -1,27 +1,35 @@
 .button {
+    /*background-color: #0066CC;*/
 }
 
 .disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #004D99;
 }
 
 .secondary {
+    background-color: lightgrey;
 }
 
 .default {
-
+    background-color: #0066CC;
 }
 
 .red {
-
+    background-color: #CC1439;
 }
 
 .default:hover {
+    background-color: #0080FF;
 }
 
 .red:hover {
+    background-color: #FF1A47;
 }
 
 .secondary:hover {
+    background-color: darkgrey;
 }
 
 
