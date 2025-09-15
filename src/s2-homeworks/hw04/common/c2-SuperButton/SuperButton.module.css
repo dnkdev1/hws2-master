@@ -3,21 +3,40 @@
 }
 
 .disabled {
+    width: 132px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
     opacity: 0.5;
     cursor: not-allowed;
     background-color: #004D99;
 }
 
 .secondary {
-    background-color: lightgrey;
+    width: 176px;
+    height: 30px;
+    border: 1px solid #0066CC;
+    border-radius: 3px;
+    background-color: white;
+    color: #0066CC;
 }
 
 .default {
+    width: 132px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
     background-color: #0066CC;
+    color: white;
 }
 
 .red {
+    width: 132px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
     background-color: #CC1439;
+    color: white;
 }
 
 .default:hover {
