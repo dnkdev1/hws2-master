@@ -18,9 +18,12 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
     const location = useLocation()
     console.log(location.pathname)
 
-    const preJuniorClass = (location.pathname === '/pre-junior' ? ' ' + s.active : ' ' + s.nav)
-    const juniorClass = (location.pathname === '/junior' ? ' ' + s.active : ' ' + s.nav)
-    const juniorPlusClass = (location.pathname === '/junior-plus' ? ' ' + s.active : ' ' + s.nav)
+    const preJuniorClass = (location.pathname === '/pre-junior'
+        ? ' ' + s.active : '')
+    const juniorClass = (location.pathname === '/junior'
+        ? ' ' + s.active : '')
+    const juniorPlusClass = (location.pathname === '/junior-plus'
+        ? ' ' + s.active : '')
 
     return (
         <>
