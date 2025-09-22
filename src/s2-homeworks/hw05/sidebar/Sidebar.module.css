@@ -1,18 +1,28 @@
 .sidebar {
-display: none;
+    display: none;
 }
 
 .sidebar.open {
     display: flex;
+    flex-direction: row;
+    width: 317px;
+    height: 200px;
+    background-color: green;
+
+
 }
 
 .background {
 }
 
 .nav {
+
 }
 
 .nav a {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     color: #000000;
 }
 
@@ -23,7 +33,13 @@ display: none;
 .nav a.active {
     color: red;
 }
+
 .close {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    left: 269px;
 }
 
 .close img {
