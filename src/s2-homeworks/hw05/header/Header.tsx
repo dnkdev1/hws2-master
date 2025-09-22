@@ -5,10 +5,11 @@ import {useLocation} from 'react-router-dom'
 import {PATH} from '../Pages'
 
 type PropsType = {
+    open: boolean
     handleOpen: () => void
 }
 
-export const Header: FC<PropsType> = ({handleOpen}) => {
+export const Header: FC<PropsType> = ({open, handleOpen}) => {
     // hw5-menu изначально отсутствует, при нажатии на бургер - появляется, при повторном нажатии исчезает
     const location = useLocation()
     const currentPath = location.pathname
@@ -24,6 +25,7 @@ export const Header: FC<PropsType> = ({handleOpen}) => {
     return (
         <>
             <div id={'hw5-header'} className={s.header}>
+                { !open &&
                 <img
                     src={burgerIcon}
                     id={'hw5-burger-menu'}
@@ -31,6 +33,7 @@ export const Header: FC<PropsType> = ({handleOpen}) => {
                     onClick={handleOpen}
                     alt={'open menu'}
                 />
+                }
                 <h1>{pageName}</h1>
             </div>
         </>

@@ -2,6 +2,9 @@
 }
 
 .header {
+    display: flex;
+
+
 }
 
 .header h1 {
