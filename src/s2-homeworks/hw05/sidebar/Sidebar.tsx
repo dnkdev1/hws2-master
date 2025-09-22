@@ -3,6 +3,8 @@ import {NavLink} from 'react-router-dom'
 import s from './Sidebar.module.css'
 import {PATH} from '../Pages'
 import closeIcon from './closeOutline.svg'
+import {useLocation} from 'react-router-dom';
+
 
 type PropsType = {
     open: boolean
@@ -12,6 +14,14 @@ type PropsType = {
 export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
     const sidebarClass = s.sidebar
         + (open ? ' ' + s.open : '')
+
+    const location = useLocation()
+    console.log(location.pathname)
+
+    const preJuniorClass = (location.pathname === '/pre-junior' ? ' ' + s.active : ' ' + s.nav)
+    const juniorClass = (location.pathname === '/junior' ? ' ' + s.active : ' ' + s.nav)
+    const juniorPlusClass = (location.pathname === '/junior-plus' ? ' ' + s.active : ' ' + s.nav)
+
     return (
         <>
             {/*затемнение справа от открытого меню*/}
@@ -32,6 +42,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         to={PATH.PRE_JUNIOR}
                         onClick={handleClose}
                         // className={...} // делает студент
+                        className={preJuniorClass}
                     >
                         Pre-junior
                     </NavLink>
@@ -40,6 +51,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         to={PATH.JUNIOR}
                         onClick={handleClose}
                         // className={...} // делает студент
+                        className={juniorClass}
                     >
                         Junior
                     </NavLink>
@@ -48,6 +60,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         to={PATH.JUNIOR_PLUS}
                         onClick={handleClose}
                         // className={...} // делает студент
+                        className={juniorPlusClass}
                     >
                         Junior Plus
                     </NavLink>
