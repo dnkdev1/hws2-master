@@ -1,15 +1,18 @@
 .sidebar {
-    display: none;
+    transform: translateX(-100%);
 }
 
 .sidebar.open {
-    display: flex;
-    flex-direction: row;
-    width: 317px;
-    height: 300px;
-    background-color: green;
-    position: absolute;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 1002;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0);
 }
 
 .background {
