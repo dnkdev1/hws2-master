@@ -1,9 +1,10 @@
 .sidebar {
     transform: translateX(-100%);
+    /*display: none;*/
 }
 
 .sidebar.open {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 25vw;
@@ -13,10 +14,17 @@
     padding: 20px;
     transition: transform 0.3s ease-in-out;
     transform: translateX(0);
+    /*display: block;*/
+    width: 320px;
 }
 
 .background {
-
+    position: absolute;
+    color: #000000;
+    opacity: 0.3%;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
 }
 
 .nav {

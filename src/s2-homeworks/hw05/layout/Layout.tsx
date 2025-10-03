@@ -26,7 +26,7 @@ export const Layout: FC<PropsType> = ({ children }) => {
         <>
             <Sidebar open={open} handleClose={handleClose} />
             <Header open={open} handleOpen={handleOpen} />
-            <div>
+            <div style={{ paddingTop: '85px', overflowX: 'hidden' }}>
                 {/*страницы*/}
                 {children}
             </div>
