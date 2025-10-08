@@ -1,23 +1,36 @@
 .item {
+
 }
 
 .item:last-of-type {
+
 }
 
 .users {
+
 }
 
 .buttonsContainer {
+
 }
 
 .container {
+
 }
 
 .thead {
+    background-color: #E5E5E5;
+
 }
 
 .nameCol {
+    padding: 10px 10px;
+    width: 250px;
+    border-top: 2px solid #E5E5E5;
 }
 
 .ageCol {
+    width: 250px;
+    border-top: 2px solid #E5E5E5;
+
 }
