@@ -55,18 +55,37 @@ const HW13 = () => {
                     setText(e.response?.data?.errorText)
                     setInfo(e.response?.data?.info)
                 }
-                if (e.response.status === 400) {
+                else if (e.response.status === 400) {
                     setCode('Код 400!')
                     setImage(error400)
                     setText(e.response?.data?.errorText)
                     setInfo(e.response?.data?.info)
                 }
-                if(axios.isAxiosError(e)){
+                else if(axios.isAxiosError(e)){
                     setCode('Error')
                     setImage(errorUnknown)
                     setText(e.message)
                     setInfo(e.name)
                 }
+
+                // if (axios.isAxiosError(e)) {
+                //     if (e.response) {
+                //         if (e.response.status === 500) {
+                //             setCode('Код 500!')
+                //             setImage(error500)
+                //             setText(e.response?.data?.errorText)
+                //             setInfo(e.response?.data?.info)
+                //         }
+                //         if (e.response.status === 400) {
+                //
+                //         }
+                //     } else if (e.request) {
+                //
+                //     }
+                //
+                // }
+
+
             }).finally(() => setIsDisable(false))
     }
 
