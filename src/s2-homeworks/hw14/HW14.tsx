@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import s2 from '../../s1-main/App.module.css'
 import s from './HW14.module.css'
-import axios from 'axios'
+import axios, {Axios} from 'axios'
 import SuperDebouncedInput from './common/c8-SuperDebouncedInput/SuperDebouncedInput'
 import {useSearchParams} from 'react-router-dom'
 
@@ -34,11 +34,15 @@ const HW14 = () => {
         setLoading(true)
         getTechs(value)
             .then((res) => {
-                // делает студент
-
-                // сохранить пришедшие данные
-
-                //
+                //res && "data" in res ? setTechs(res.data.techs) : console.log("Ответа нет")
+                // делает студентyyyyyyyy
+                if (res && "data" in res) {
+                    setTechs(res.data.techs)
+                } else {
+                    // Здесь res === void
+                    console.log("Ответа нет")
+                }
+                setLoading(false) // сохранить пришедшие данные
             })
     }
 
@@ -50,12 +54,16 @@ const HW14 = () => {
         // setSearchParams(
 
         //
+
+        setSearchParams(value)
+        console.log('setSearch params:', value)
     }
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
         sendQuery(params.find || '')
         setFind(params.find || '')
+
     }, [])
 
     const mappedTechs = techs.map(t => (
