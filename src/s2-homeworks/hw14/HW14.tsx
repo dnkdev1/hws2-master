@@ -39,7 +39,6 @@ const HW14 = () => {
                 if (res && "data" in res) {
                     setTechs(res.data.techs)
                 } else {
-                    // Здесь res === void
                     console.log("Ответа нет")
                 }
                 setLoading(false) // сохранить пришедшие данные
