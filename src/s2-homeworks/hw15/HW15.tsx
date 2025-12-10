@@ -55,6 +55,7 @@ const HW15 = () => {
                 // сохранить пришедшие данные
                 if(res){
                     setTechs(res.data.techs)
+                    setTotarfrlCount(res.data.totalCount)
                 }
 
             })
