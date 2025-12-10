@@ -53,7 +53,8 @@ const HW15 = () => {
             .then((res) => {
                 // делает студент
                 // сохранить пришедшие данные
-                if(res){
+                if (res) {
+                    setLoading(false)
                     setTechs(res.data.techs)
                     setTotarfrlCount(res.data.totalCount)
                 }
@@ -63,11 +64,10 @@ const HW15 = () => {
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
-
         // setPage(
-setPage(newPage)
+        setPage(newPage)
         // setCount(
-setCount(newCount)
+        setCount(newCount)
         // sendQuery(
         sendQuery({sort: '', page: newPage, count: newCount})
         // setSearchParams(
@@ -113,7 +113,7 @@ setCount(newCount)
             <div className={s2.hwTitle}>Homework #15</div>
 
             <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+                {idLoading && <div id={'hw15-loading'} className={s.loading}></div>}
 
                 <SuperPagination
                     page={page}
