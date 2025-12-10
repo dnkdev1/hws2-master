@@ -64,11 +64,11 @@ const HW15 = () => {
         // делает студент
 
         // setPage(
-
+setPage(newPage)
         // setCount(
 setCount(newCount)
         // sendQuery(
-        sendQuery({sort: '', page: 1, count: newCount})
+        sendQuery({sort: '', page: newPage, count: newCount})
         // setSearchParams(
 
         //
