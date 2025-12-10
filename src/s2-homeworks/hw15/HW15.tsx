@@ -64,9 +64,11 @@ const HW15 = () => {
         // делает студент
 
         // setPage(
-        // setCount(
 
+        // setCount(
+setCount(newCount)
         // sendQuery(
+        sendQuery({sort: '', page: 1, count: newCount})
         // setSearchParams(
 
         //
@@ -79,12 +81,14 @@ const HW15 = () => {
         // setPage(1) // при сортировке сбрасывать на 1 страницу
 
         // sendQuery(
+        //sendQuery(3)
         // setSearchParams(
 
         //
     }
 
     useEffect(() => {
+
         const params = Object.fromEntries(searchParams)
         sendQuery({page: params.page, count: params.count})
         setPage(+params.page || 1)
