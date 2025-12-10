@@ -69,7 +69,7 @@ const HW15 = () => {
         // setCount(
         setCount(newCount)
         // sendQuery(
-        sendQuery({sort: '', page: newPage, count: newCount})
+        sendQuery({sort: 'desc', page: newPage, count: newCount})
         // setSearchParams(
 
         //

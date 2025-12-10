@@ -1,17 +1,19 @@
 .tech {
     width: 50vw;
+    border-bottom: #E5E5E5 1px solid;
 }
 
 .developer {
-
+    border-bottom: #E5E5E5 1px solid;
 }
 
 .techHeader {
     width: 50vw;
+    background-color: #E5E5E5;
 }
 
 .developerHeader {
-
+    background-color: #E5E5E5;
 }
 
 .row {
@@ -34,6 +36,8 @@
     align-items: center;
     justify-content: center;
     position: fixed;
+    top: 70%;
+    left: 50%;
 
 }
 
