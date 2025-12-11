@@ -63,29 +63,19 @@ const HW15 = () => {
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
-        // делает студент
-        // setPage(
         setPage(newPage)
-        // setCount(
         setCount(newCount)
-        // sendQuery(
-        sendQuery({sort: 'desc', page: newPage, count: newCount})
-        // setSearchParams(
-
-        //
+        const params = { sort, page: String(newPage), count: String(newCount) }
+        sendQuery(params)
+        setSearchParams(params)
     }
 
     const onChangeSort = (newSort: string) => {
-        // делает студент
-
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
-
-        // sendQuery(
-        //sendQuery(3)
-        // setSearchParams(
-
-        //
+        setSort(newSort)
+        setPage(1)
+        const params = { sort: newSort, page: String(1), count: String(count) }
+        sendQuery(params)
+        setSearchParams(params)
     }
 
     useEffect(() => {
