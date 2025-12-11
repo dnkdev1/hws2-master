@@ -1,9 +1,15 @@
 import React from 'react'
+import greyUp from './../../img/greyUp.png'
+import greyDown from './../../img/greyDown.png'
+import blackUP from './../../img/blackUp.png'
+import blackDown from './../../img/blackDown.png'
 
 // добавить в проект иконки и импортировать
 const downIcon = '[\\/]'
 const upIcon = '[/\\]'
 const noneIcon = '[--]'
+
+
 
 export type SuperSortPropsType = {
     id?: string
@@ -34,6 +40,14 @@ const SuperSort: React.FC<SuperSortPropsType> = (
         onChange(pureChange(sort, down, up))
     }
 
+    // const icon2 = sort === down
+    //     ? downIcon2
+    //     : sort === up
+    //         ? upIcon2
+    //         : noneIcon2
+
+
+
     const icon = sort === down
         ? downIcon
         : sort === up
@@ -51,7 +65,20 @@ const SuperSort: React.FC<SuperSortPropsType> = (
             {/*    src={icon}*/}
             {/*/>*/}
 
-            {icon} {/*а это убрать*/}
+            {/*{icon} /!*а это убрать*!/*/}
+
+            {
+                sort === down
+                ? <img src={blackDown} alt="" style={{ display: "inline-block" }}/>
+                : sort === up
+                    ? <img src={blackUP} style={{ display: "inline-block" }}/>
+                    : <><img src={greyUp} style={{ display: "inline-block" }}/>
+                            <img src={greyDown} style={{ display: "inline-block" }}/>
+                        </>
+            }
+
+
+
         </span>
     )
 }
